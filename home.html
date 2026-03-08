@@ -33,9 +33,9 @@
 
     <section>
         <div class="flex gap-3 shadow-gray-300 shadow-sm max-w-11/12 mt-8 mx-auto rounded-sm p-5">
-            <button class="py-2 px-9 rounded-md border-gray-200 border text-white cursor-pointer bg-blue-700">All</button>
-            <button class="py-2 px-9 rounded-md border-gray-200 border text-[#64748B] cursor-pointer">Open</button>
-            <button class="py-2 px-9 rounded-md border-gray-200 border text-[#64748B] cursor-pointer">Closed</button>
+            <button onclick="loadAll()" class="py-2 px-9 rounded-md border-gray-200 border text-white cursor-pointer bg-blue-700">All</button>
+            <button onclick="loadOpen()" class="py-2 px-9 rounded-md border-gray-200 border text-[#64748B] cursor-pointer">Open</button>
+            <button onclick="loadClosed()" class="py-2 px-9 rounded-md border-gray-200 border text-[#64748B] cursor-pointer">Closed</button>
         </div>
     </section>
     <section>
@@ -43,7 +43,7 @@
             <div class="flex items-center gap-3">
                 <img src="./assets/Aperture.png" class="bg-slate-200 rounded-full p-2" alt="">
                 <div>
-                    <h2 class="font-semibold text-5">0 <span>Issues</span></h2>
+                    <h2 id="issuesCount" class="font-semibold text-5">0 <span>Issues</span></h2>
                     <p class="font-medium text-[#64748B]">Track and manage your project issues</p>
                 </div>
             </div>
@@ -56,10 +56,10 @@
         </div>
     </section>
     <section>
-        <div class="grid grid-cols-4 gap-1 shadow-gray-300 shadow-sm max-w-11/12 mx-auto rounded-sm p-5">
-            <div id="cardsContainer" class="cards bg-slate-100 rounded-md shadow-lg">
-                <div>
-                    <div class="p-4 space-y-3">
+        <div class=" shadow-gray-300 shadow-sm max-w-11/12 mx-auto rounded-sm p-3">
+            <div id="cardsContainer" class=" grid grid-cols-3 gap-3">
+                <!-- <div class="cards bg-slate-100 rounded-md shadow-lg">
+                    <div class="p-4 space-y-3 ">
                         <div class="flex justify-between items-center">
                             <img src="./assets/Open-Status.png" alt="">
                             <button class="py-1 px-4 bg-[#FEECEC] rounded-2xl text-[#EF4444]">HIGH</button>
@@ -76,11 +76,12 @@
                         <p class="text-[#64748B] text-3">#1by john_doe</p>
                         <p class="text-[#64748B] text-3">1/15/2024</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
     <!-- javascript integration -->
-    <script src="./index.js"></script>
+
+    <script src="./home.js"></script>
 </body>
 </html>
