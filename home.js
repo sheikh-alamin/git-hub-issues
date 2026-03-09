@@ -3,18 +3,6 @@ const issuesCountElement = document.getElementById("issuesCount");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn")
 
-// searchBtn.addEventListener("click" , async () => {
-//     const query = searchInput.value.trim();
-//     if (!query) return;
-
-//     const url =  `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}`
-// })
-
-// function calculateCount () {
-//     total.innerText = 
-// }
-
-
 const loadCardDetail = async (id) => {
     const url= `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
     
@@ -23,21 +11,8 @@ const loadCardDetail = async (id) => {
     displayCardDetails(details.data);
 }
 
-// "id": 50,
-// "title": "Create automated testing pipeline",
-// "description": "Set up CI/CD pipeline with automated tests running on every commit and pull request.",
-// "status": "open",
-// "labels": [
-// "enhancement",
-// "help wanted"
-// ],
-// "priority": "high",
-// "author": "ci_cd_cindy",
-// "assignee": "test_tina",
-// "createdAt": "2024-02-10T08:00:00Z",
-// "updatedAt": "2024-02-10T08:00:00Z" 
 const displayCardDetails = (card) => {
-    // console.log(card);
+    
     const detailsBox = document.getElementById("details-container");    
 
     const labelStyles = {
@@ -101,17 +76,20 @@ const manageSpinner = (status) => {
 
     }
 }
-
+let allIssues = [];
 async function loadCards() {
     manageSpinner(true);
     const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
     const data = await res.json();
-    displayCards(data.data);
+    allIssues=data.data;
+    displayCards(allIssues);
     
+
     if (issuesCountElement) {
-    issuesCountElement.textContent = data.data.length;
+    issuesCountElement.textContent = allIssues.length;
 }
 }
+
 function displayCards(cards) {
     cardsContainer.innerHTML = "" ;
     cards.forEach((card) => {
