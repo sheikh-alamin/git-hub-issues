@@ -25,17 +25,17 @@
                 <h1 class="font-semibold text-6">GitHub Issues Tracker</h1>
             </div>
             <div class="flex gap-2">
-                <input type="text" placeholder="Search issues..." class="input input-bordered w-24 md:w-auto" />
-                <button class="text-white cursor-pointer bg-blue-700 py-2 px-5 rounded-md">+ New Issue</button>
+                <input id="searchInput" type="text" placeholder="Search issues..." class="input input-bordered w-24 md:w-auto" />
+                <button id="searchBtn" class="text-white cursor-pointer bg-blue-700 py-2 px-5 rounded-md">+ New Issue</button>
             </div>
         </div>
     </header>
 
     <section>
         <div class="flex gap-3 shadow-gray-300 shadow-sm max-w-11/12 mt-8 mx-auto rounded-sm p-5">
-            <button onclick="loadAll()" class="py-2 px-9 rounded-md border-gray-200 border text-white cursor-pointer bg-blue-700">All</button>
-            <button onclick="loadOpen()" class="py-2 px-9 rounded-md border-gray-200 border text-[#64748B] cursor-pointer">Open</button>
-            <button onclick="loadClosed()" class="py-2 px-9 rounded-md border-gray-200 border text-[#64748B] cursor-pointer">Closed</button>
+            <button id="allBtn" class="py-2 px-9 rounded-md border-gray-200 border text-white cursor-pointer bg-blue-700">All</button>
+            <button id="openBtn" class="py-2 px-9 rounded-md border-gray-200 border text-[#64748B] cursor-pointer">Open</button>
+            <button id="closedBtn" class="py-2 px-9 rounded-md border-gray-200 border text-[#64748B] cursor-pointer">Closed</button>
         </div>
     </section>
     <section>

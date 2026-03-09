@@ -1,29 +1,20 @@
 const cardsContainer = document.getElementById("cardsContainer");
 const issuesCountElement = document.getElementById("issuesCount");
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn")
+
+// searchBtn.addEventListener("click" , async () => {
+//     const query = searchInput.value.trim();
+//     if (!query) return;
+
+//     const url =  `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}`
+// })
 
 // function calculateCount () {
 //     total.innerText = 
 // }
 
 
-// const priorityStyles = {
-//     HIGH: "bg-[#FEECEC] text-[#EF4444]", 
-//     MEDIUM: "bg-[#FFF8DB] text-[#D97706]",
-//     LOW: "bg-[#DCFCE7] text-[#16A34A]"
-// };
-
-// const statusImages = {
-//     open: "./assets/Open-Status.png",
-//     closed: "./assets/Closed-Status.png",
-// }
-// async function loadOpen() {
-//     const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
-//     const data = await res.json();
-//     const openIssues = data.data.filter(issue => issue.status === "open");
-
-//     displayIssues(openIssues);
-//     console.log(openIssues);
-// }
 const loadCardDetail = async (id) => {
     const url= `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
     
