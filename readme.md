@@ -11,7 +11,9 @@
     . map() modifies each item to make new array.
     . filter () makes new array by selecting some items according to condition.
     . forEach () runs action on each item for array.
+
 4️⃣ What is an arrow function?
     . it is a modern way to write function using short syntax. it makes code small and readable.
+
 5️⃣ What are template literals?
     . it use to set variable inside strings. by using backtick `` and variable syntax.
